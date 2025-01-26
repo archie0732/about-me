@@ -1,0 +1,43 @@
+{
+  "nick_name": "archie",
+  "avatar": "/user/8.jpg",
+  "favorite_character": [
+    {
+      "name": "",
+      "avatar": "",
+      "descroption": ""
+    }
+  ],
+  "description": ["一個因為興趣而立志成為工程師的宅宅", "動漫、類魂、卡牌遊戲"],
+  "project": [
+    {
+      "name": "c-solution",
+      "description": "一個包含leetcode、codeforce等題目的程式碼與詳解",
+      "link": ""
+    },
+    {
+      "name": "r7manga",
+      "description": "完全開源免費的漫畫閱讀器，網站線已架設完畢",
+      "link": ""
+    }
+  ],
+  "social_media": {
+    "instagram": {
+      "username": "",
+      "link": ""
+    },
+    "github": {
+      "username": "",
+      "link": ""
+    },
+    "discord": {
+      "username": "",
+      "link": ""
+    },
+    "x": {
+      "username": "",
+      "link": ""
+    }
+  },
+  "final_update": ""
+}
