@@ -40,3 +40,12 @@ export interface ProjectAPIData {
     link: string;
   }[];
 }
+
+export interface AnimeAPIData {
+  character: {
+    name: string;
+    en_name: string;
+    anime_source: string;
+    description: string;
+  }[];
+}

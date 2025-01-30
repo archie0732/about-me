@@ -1,7 +1,9 @@
 'use client';
 import { Github } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 
 import { ProjectAPIData } from '@/app/api/_model/apitype';
 
@@ -9,6 +11,21 @@ import { Button } from '../ui/button';
 
 export function ProjectDisplay({ project }: ProjectAPIData) {
   const router = useRouter();
+  const [startIndex, setStartIndex] = useState(0);
+  const [endIndex, setEndIndex] = useState(5);
+  const [currentPage, setCurrntPage] = useState(1);
+  const totalProject = project.length;
+  const totalPage = Math.floor(totalProject / 6) + (totalProject % 6 > 0 ? 1 : 0);
+
+  const moveIndex = (index: -1 | 1) => {
+    const cur = currentPage + index;
+    const start = (cur - 1) * 6;
+    const end = start + 5;
+    setCurrntPage(cur);
+    setStartIndex(start);
+    setEndIndex(end);
+  };
+
   return (
     <div className={`
       relative min-h-[800px] rounded-md bg-gray-400/20 p-4
@@ -21,7 +38,7 @@ export function ProjectDisplay({ project }: ProjectAPIData) {
       `}
       >
         {
-          project.slice(0, 6).map((p, i) => (
+          project.slice(startIndex, endIndex).map((p, i) => (
             <div
               key={`project-${i}`}
               className={`
@@ -69,20 +86,23 @@ export function ProjectDisplay({ project }: ProjectAPIData) {
       </div>
 
       <div className={`
-        absolute bottom-1 left-0 right-0 flex justify-center p-2
-        md:mt-10
+        absolute bottom-1 flex justify-center p-2
+        md:left-0 md:right-0 md:mt-10
       `}
       >
         <div className="flex gap-2">
-          <Button variant="aaa">{'<'}</Button>
-          <Button variant="aaa">{'>'}</Button>
+          <Button variant="aaa" onClick={() => moveIndex(-1)} disabled={startIndex === 0}>{'<'}</Button>
+          <Link href="https://youtu.be/0GeQVtZ6Rd4?si=Z0ATK4DmuZJzR_xk">
+            <Button>{currentPage}</Button>
+          </Link>
+          <Button variant="aaa" onClick={() => moveIndex(1)} disabled={currentPage === totalPage}>{'>'}</Button>
         </div>
       </div>
       <Image
         src="/image/_04.png"
         alt="project-image"
-        height={100}
-        width={100}
+        height={200}
+        width={200}
         className="absolute bottom-0.5 right-0"
       />
     </div>

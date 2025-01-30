@@ -2,6 +2,7 @@ import { Album, LinkIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { AnimeDemo } from '@/components/homepage/anime-demo';
 import { Button } from '@/components/ui/button';
 import { ProjectDisplay } from '@/components/homepage/project';
 import { SocialMedia } from '@/components/homepage/social-media';
@@ -24,7 +25,7 @@ export default async function Home() {
 
   return (
     <div className="m-4">
-      <div className="min-h-screen">
+      <div className="min-h-screen" id="homepage">
         <span className={`
           mt-12 flex justify-center text-xl font-bold
           md:p-8
@@ -153,6 +154,18 @@ export default async function Home() {
             Project
           </h2>
           <ProjectDisplay project={projectData.project} />
+        </div>
+      </div>
+
+      <div className="flex min-h-screen items-center justify-center p-4" id="anime">
+        <div>
+          <h2 className={`
+            mt-12 flex items-center justify-center text-2xl font-bold
+          `}
+          >
+            Anime
+          </h2>
+          <AnimeDemo />
         </div>
       </div>
     </div>

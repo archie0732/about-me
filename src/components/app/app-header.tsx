@@ -8,10 +8,11 @@ import { Button } from '../ui/button';
 import { ModeToggle } from '../button/theme-button';
 
 const headerOptions: { name: string; link: string }[] = [
-  { name: 'Animes', link: '/#anime' },
-  { name: 'Project', link: '/#project' },
-  { name: 'About This Web', link: '/#about' },
-  { name: 'Settings', link: '/settings' },
+  { name: 'Home', link: 'homepage' },
+  { name: 'Project', link: 'project' },
+  { name: 'Anime', link: 'anime' },
+  { name: 'About', link: 'about' },
+  { name: 'Settings', link: 'settings' },
 ];
 
 export function AppHeader() {
@@ -41,15 +42,17 @@ export function AppHeader() {
           `}
           >
             {headerOptions.map((option) => (
-              <Link href={option.link} key={option.name}>
-                <div className={`
+
+              <div
+                className={`
                   p-2 text-sky-700
                   dark:text-sky-200/70
                 `}
-                >
-                  {option.name}
-                </div>
-              </Link>
+                key={option.name}
+                onClick={() => { document.getElementById(option.link)?.scrollIntoView({ behavior: 'smooth' }); }}
+              >
+                {option.name}
+              </div>
             ))}
           </div>
         </div>
