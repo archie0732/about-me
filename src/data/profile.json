@@ -19,6 +19,11 @@
       "name": "r7manga",
       "description": "完全開源免費的漫畫閱讀器，網站線已架設完畢",
       "link": ""
+    },
+    {
+      "name": "kun-kun-bot v2",
+      "description": "discord bot, 包含訂閱內容通知，簽到與抽籤等日常服務",
+      "link": ""
     }
   ],
   "social_media": {

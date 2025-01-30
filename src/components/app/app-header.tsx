@@ -42,7 +42,13 @@ export function AppHeader() {
           >
             {headerOptions.map((option) => (
               <Link href={option.link} key={option.name}>
-                <div className="p-2 text-sky-200/70">{option.name}</div>
+                <div className={`
+                  p-2 text-sky-700
+                  dark:text-sky-200/70
+                `}
+                >
+                  {option.name}
+                </div>
               </Link>
             ))}
           </div>

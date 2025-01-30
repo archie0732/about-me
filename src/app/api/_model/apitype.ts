@@ -32,3 +32,11 @@ export interface ProfileAPIData {
   };
   final_update: string;
 }
+
+export interface ProjectAPIData {
+  project: {
+    name: string;
+    description: string;
+    link: string;
+  }[];
+}

@@ -45,7 +45,13 @@ export default function RootLayout({
         >
           <div className="flex w-svw flex-1 flex-col">
             <div className="flex min-h-svh flex-col">
-              <AppHeader />
+              <div className={`
+                fixed w-full bg-white/60 backdrop-blur-sm
+                dark:bg-gray-600/60
+              `}
+              >
+                <AppHeader />
+              </div>
               {children}
               <Toaster />
             </div>

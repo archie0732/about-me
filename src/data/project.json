@@ -1,0 +1,54 @@
+{
+  "project": [
+    {
+      "name": "c-solution",
+      "description": "一個包含leetcode、codeforce等題目的程式碼與詳解",
+      "link": ""
+    },
+    {
+      "name": "r7manga",
+      "description": "完全開源免費的漫畫閱讀器，網站線已架設完畢",
+      "link": ""
+    },
+    {
+      "name": "kun-kun-bot v2",
+      "description": "discord bot, 包含訂閱內容通知，簽到與抽籤等日常服務",
+      "link": ""
+    },
+    {
+      "name": "nhentai-comic-crawler",
+      "description": "nhentai-comic-crawler",
+      "link": "https://github.com/archie0732/nhentai-comic-crawler"
+    },
+    {
+      "name": "lazyTAHW",
+      "description": "一個可以自動改作業的厲害東西",
+      "link": "https://github.com/archie0732/layzHw"
+    },
+    {
+      "name": "coffee-bot",
+      "description": "包含leetcodeAPI, codeforceAPI 等等輔助競程的discord bot",
+      "link": "https://github.com/archie0732/coding-bot-v2"
+    },
+    {
+      "name": "jkforumAPI",
+      "description": "一個支援 jkforum(捷克論壇) 的 API，包含作者與圖片連結及下載",
+      "link": "https://github.com/archie0732/jkforumAPI"
+    },
+    {
+      "name": "albion-auto-finshing",
+      "description": "albion 客戶端自動釣魚插件，不會被ban",
+      "link": "https://github.com/archie0732/albion-auto-fishing"
+    },
+    {
+      "name": "pixiv-crawler",
+      "description": "pixiv api and images downloader",
+      "link": "https://github.com/archie0732/pixiv-crawler"
+    },
+    {
+      "name": "Discrete-web",
+      "description": "離散計算機，節省手動計算時間",
+      "link": "https://github.com/archie0732/Discrete-web"
+    }
+  ]
+}
